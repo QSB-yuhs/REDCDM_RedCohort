@@ -1,0 +1,19 @@
+Package: redCohort
+Type: Package
+Title: A Study Package for Generating Cohort Diagnostics
+Version: 0.0.1
+Author: Kyuseop Kim [aut, cre]
+Maintainer: Kyuseop Kim <qsb0919@yuhs.ac>
+Description: A package that generates cohort diagnostics for cohort definitions included in the package.
+Imports:
+	CohortDiagnostics (>= 2.1.0),
+	ParallelLogger (>= 2.0.1),
+	DatabaseConnector (>= 4.0.2),
+  OhdsiSharing
+Suggests:
+    ROhdsiWebApi
+License: Apache License (>= 2)
+LazyData: TRUE
+RoxygenNote: 7.1.1
+Encoding: UTF-8
+Language: en-US
