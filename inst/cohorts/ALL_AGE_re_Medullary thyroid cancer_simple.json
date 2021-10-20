@@ -3,9 +3,9 @@
 	"PrimaryCriteria" : {
 		"CriteriaList" : [
 			{
-				"ConditionOccurrence" : {
-					"CodesetId" : 0,
-					"ConditionTypeExclude" : false
+				"ProcedureOccurrence" : {
+					"CodesetId" : 1,
+					"ProcedureTypeExclude" : false
 				}
 			}
 		],
@@ -9778,8 +9778,7 @@
 						},
 						"StartWindow" : {
 							"Start" : {
-								"Days" : 1,
-								"Coeff" : 1
+								"Coeff" : -1
 							},
 							"End" : {
 								"Coeff" : 1
@@ -9791,7 +9790,7 @@
 						"IgnoreObservationPeriod" : false,
 						"Occurrence" : {
 							"Type" : 2,
-							"Count" : 1,
+							"Count" : 2,
 							"IsDistinct" : false
 						}
 					}
@@ -9804,237 +9803,168 @@
 			"name" : "Surgery",
 			"expression" : {
 				"Type" : "ANY",
-				"CriteriaList" : [
+				"CriteriaList" : [],
+				"DemographicCriteriaList" : [],
+				"Groups" : [
 					{
-						"Criteria" : {
-							"ProcedureOccurrence" : {
-								"CorrelatedCriteria" : {
-									"Type" : "ALL",
-									"CriteriaList" : [
-										{
-											"Criteria" : {
-												"Measurement" : {
-													"CodesetId" : 2,
-													"MeasurementTypeExclude" : false
-												}
-											},
-											"StartWindow" : {
-												"Start" : {
-													"Days" : 0,
-													"Coeff" : -1
-												},
-												"End" : {
-													"Coeff" : 1
-												},
-												"UseIndexEnd" : false,
-												"UseEventEnd" : false
-											},
-											"RestrictVisit" : false,
-											"IgnoreObservationPeriod" : false,
-											"Occurrence" : {
-												"Type" : 2,
-												"Count" : 2,
-												"IsDistinct" : false
-											}
-										},
-										{
-											"Criteria" : {
-												"Measurement" : {
-													"CorrelatedCriteria" : {
-														"Type" : "ALL",
-														"CriteriaList" : [
-															{
-																"Criteria" : {
-																	"Measurement" : {
-																		"CodesetId" : 3,
-																		"MeasurementTypeExclude" : false
-																	}
-																},
-																"StartWindow" : {
-																	"Start" : {
-																		"Days" : 0,
-																		"Coeff" : -1
-																	},
-																	"End" : {
-																		"Days" : 0,
-																		"Coeff" : 1
-																	},
-																	"UseIndexEnd" : false,
-																	"UseEventEnd" : false
-																},
-																"RestrictVisit" : false,
-																"IgnoreObservationPeriod" : false,
-																"Occurrence" : {
-																	"Type" : 2,
-																	"Count" : 1,
-																	"IsDistinct" : false
-																}
-															}
-														],
-														"DemographicCriteriaList" : [],
-														"Groups" : []
-													},
-													"CodesetId" : 2,
-													"MeasurementTypeExclude" : false
-												}
-											},
-											"StartWindow" : {
-												"Start" : {
-													"Days" : 0,
-													"Coeff" : -1
-												},
-												"End" : {
-													"Coeff" : 1
-												},
-												"UseIndexEnd" : false,
-												"UseEventEnd" : false
-											},
-											"RestrictVisit" : false,
-											"IgnoreObservationPeriod" : false,
-											"Occurrence" : {
-												"Type" : 2,
-												"Count" : 1,
-												"IsDistinct" : false
-											}
-										},
-										{
-											"Criteria" : {
-												"Measurement" : {
-													"CodesetId" : 4,
-													"MeasurementTypeExclude" : false
-												}
-											},
-											"StartWindow" : {
-												"Start" : {
-													"Days" : 0,
-													"Coeff" : -1
-												},
-												"End" : {
-													"Coeff" : 1
-												},
-												"UseIndexEnd" : false,
-												"UseEventEnd" : false
-											},
-											"RestrictVisit" : false,
-											"IgnoreObservationPeriod" : false,
-											"Occurrence" : {
-												"Type" : 1,
-												"Count" : 1,
-												"IsDistinct" : false
-											}
-										}
-									],
-									"DemographicCriteriaList" : [],
-									"Groups" : []
+						"Type" : "ALL",
+						"CriteriaList" : [
+							{
+								"Criteria" : {
+									"DrugExposure" : {
+										"CodesetId" : 5,
+										"DrugTypeExclude" : false
+									}
 								},
-								"CodesetId" : 1,
-								"ProcedureTypeExclude" : false
+								"StartWindow" : {
+									"Start" : {
+										"Coeff" : -1
+									},
+									"End" : {
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 1,
+									"IsDistinct" : false
+								}
+							},
+							{
+								"Criteria" : {
+									"Measurement" : {
+										"CorrelatedCriteria" : {
+											"Type" : "ALL",
+											"CriteriaList" : [
+												{
+													"Criteria" : {
+														"Measurement" : {
+															"CodesetId" : 3,
+															"MeasurementTypeExclude" : false
+														}
+													},
+													"StartWindow" : {
+														"Start" : {
+															"Days" : 0,
+															"Coeff" : -1
+														},
+														"End" : {
+															"Days" : 0,
+															"Coeff" : 1
+														},
+														"UseIndexEnd" : false,
+														"UseEventEnd" : false
+													},
+													"RestrictVisit" : true,
+													"IgnoreObservationPeriod" : false,
+													"Occurrence" : {
+														"Type" : 2,
+														"Count" : 1,
+														"IsDistinct" : false
+													}
+												}
+											],
+											"DemographicCriteriaList" : [],
+											"Groups" : []
+										},
+										"CodesetId" : 2,
+										"MeasurementTypeExclude" : false
+									}
+								},
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 0,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 2,
+									"IsDistinct" : false
+								}
 							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Coeff" : -1
-							},
-							"End" : {
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 2,
-							"Count" : 1,
-							"IsDistinct" : false
-						}
+						],
+						"DemographicCriteriaList" : [],
+						"Groups" : []
 					},
 					{
-						"Criteria" : {
-							"ProcedureOccurrence" : {
-								"CorrelatedCriteria" : {
-									"Type" : "ALL",
-									"CriteriaList" : [
-										{
-											"Criteria" : {
-												"Measurement" : {
-													"CodesetId" : 2,
-													"MeasurementTypeExclude" : false
+						"Type" : "ALL",
+						"CriteriaList" : [
+							{
+								"Criteria" : {
+									"Measurement" : {
+										"CorrelatedCriteria" : {
+											"Type" : "ALL",
+											"CriteriaList" : [
+												{
+													"Criteria" : {
+														"Measurement" : {
+															"CodesetId" : 3,
+															"MeasurementTypeExclude" : false
+														}
+													},
+													"StartWindow" : {
+														"Start" : {
+															"Days" : 0,
+															"Coeff" : -1
+														},
+														"End" : {
+															"Coeff" : 1
+														},
+														"UseIndexEnd" : false,
+														"UseEventEnd" : false
+													},
+													"RestrictVisit" : true,
+													"IgnoreObservationPeriod" : false,
+													"Occurrence" : {
+														"Type" : 2,
+														"Count" : 1,
+														"IsDistinct" : false
+													}
 												}
-											},
-											"StartWindow" : {
-												"Start" : {
-													"Days" : 0,
-													"Coeff" : -1
-												},
-												"End" : {
-													"Coeff" : 1
-												},
-												"UseIndexEnd" : false,
-												"UseEventEnd" : false
-											},
-											"RestrictVisit" : false,
-											"IgnoreObservationPeriod" : false,
-											"Occurrence" : {
-												"Type" : 2,
-												"Count" : 2,
-												"IsDistinct" : false
-											}
+											],
+											"DemographicCriteriaList" : [],
+											"Groups" : []
 										},
-										{
-											"Criteria" : {
-												"DrugExposure" : {
-													"CodesetId" : 5,
-													"DrugTypeExclude" : false
-												}
-											},
-											"StartWindow" : {
-												"Start" : {
-													"Coeff" : -1
-												},
-												"End" : {
-													"Coeff" : 1
-												},
-												"UseIndexEnd" : false,
-												"UseEventEnd" : false
-											},
-											"RestrictVisit" : false,
-											"IgnoreObservationPeriod" : false,
-											"Occurrence" : {
-												"Type" : 2,
-												"Count" : 1,
-												"IsDistinct" : false
-											}
-										}
-									],
-									"DemographicCriteriaList" : [],
-									"Groups" : []
+										"CodesetId" : 2,
+										"MeasurementTypeExclude" : false
+									}
 								},
-								"CodesetId" : 1,
-								"ProcedureTypeExclude" : false
+								"StartWindow" : {
+									"Start" : {
+										"Days" : 0,
+										"Coeff" : -1
+									},
+									"End" : {
+										"Coeff" : 1
+									},
+									"UseIndexEnd" : false,
+									"UseEventEnd" : false
+								},
+								"RestrictVisit" : false,
+								"IgnoreObservationPeriod" : false,
+								"Occurrence" : {
+									"Type" : 2,
+									"Count" : 2,
+									"IsDistinct" : false
+								}
 							}
-						},
-						"StartWindow" : {
-							"Start" : {
-								"Coeff" : -1
-							},
-							"End" : {
-								"Coeff" : 1
-							},
-							"UseIndexEnd" : false,
-							"UseEventEnd" : false
-						},
-						"RestrictVisit" : false,
-						"IgnoreObservationPeriod" : false,
-						"Occurrence" : {
-							"Type" : 2,
-							"Count" : 1,
-							"IsDistinct" : false
-						}
+						],
+						"DemographicCriteriaList" : [],
+						"Groups" : []
 					}
-				],
-				"DemographicCriteriaList" : [],
-				"Groups" : []
+				]
 			}
 		}
 	],

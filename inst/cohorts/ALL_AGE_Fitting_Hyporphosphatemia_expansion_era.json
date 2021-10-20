@@ -20,7 +20,7 @@
 	"ConceptSets" : [
 		{
 			"id" : 0,
-			"name" : "disorders of phosphorous metabolism and phosphatases",
+			"name" : "저인산혈증 - 인대사 및 인산분해효소장애",
 			"expression" : {
 				"items" : [
 					{
@@ -45,7 +45,7 @@
 		},
 		{
 			"id" : 1,
-			"name" : "Active Vitamin D",
+			"name" : "부갑상선기능저하증 - Active Vitamin D",
 			"expression" : {
 				"items" : [
 					{
@@ -197,7 +197,7 @@
 		},
 		{
 			"id" : 3,
-			"name" : " Tenofovir & adefovir dipivoxil",
+			"name" : "저인산혈증 - Tenofovir & adefovir dipivoxil",
 			"expression" : {
 				"items" : [
 					{
@@ -9827,7 +9827,7 @@
 		},
 		{
 			"id" : 4,
-			"name" : " Fanconi syndrome",
+			"name" : "저인산혈증 - Fanconi syndrome",
 			"expression" : {
 				"items" : [
 					{
@@ -9852,7 +9852,7 @@
 		},
 		{
 			"id" : 5,
-			"name" : " hyperparathyroidism",
+			"name" : "저인산혈증 - 부갑상선기능항진증",
 			"expression" : {
 				"items" : [
 					{
@@ -9877,7 +9877,7 @@
 		},
 		{
 			"id" : 6,
-			"name" : " hypoparathyroidism",
+			"name" : "저인산혈증 - 부갑상선기능저하증",
 			"expression" : {
 				"items" : [
 					{
@@ -9953,7 +9953,7 @@
 		},
 		{
 			"id" : 7,
-			"name" : " Chronic kidney disease stage 5 & ESRD",
+			"name" : "저인산혈증 - 만성신장병 5기",
 			"expression" : {
 				"items" : [
 					{
@@ -9995,7 +9995,7 @@
 		},
 		{
 			"id" : 8,
-			"name" : " Transplanted kidney present",
+			"name" : "저인산혈증 - 신장이식상태",
 			"expression" : {
 				"items" : [
 					{
@@ -10020,7 +10020,7 @@
 		},
 		{
 			"id" : 9,
-			"name" : " renal osteodystrophy",
+			"name" : "저인산혈증 - 신장성골디스트로피",
 			"expression" : {
 				"items" : [
 					{
@@ -10045,7 +10045,7 @@
 		},
 		{
 			"id" : 10,
-			"name" : " impaired renal tubular function",
+			"name" : "저인산혈증 - 세뇨관기능손상으로 인한 기타장애",
 			"expression" : {
 				"items" : [
 					{
@@ -10163,7 +10163,7 @@
 		},
 		{
 			"id" : 12,
-			"name" : " Hemodialysis",
+			"name" : "저인산혈증 - 투석환자",
 			"expression" : {
 				"items" : [
 					{
