@@ -1,4 +1,5 @@
 library(redCohort)
+renv::restore()
 
 # Maximum number of cores to be used:
 maxCores <- parallel::detectCores()
@@ -45,7 +46,6 @@ redCohort::execute(
         
 )
 
-outputFolder <- "C:/REDCDM"
 
 CohortDiagnostics::preMergeDiagnosticsFiles(dataFolder = outputFolder)
 #shared file: c:/REDCDM/diagnosticsExport/Results_REDCDM.zip
@@ -65,4 +65,3 @@ write.csv(df,csvFolder)
 DatabaseConnector::disconnect(conn)
 
 
-##renv::restore()
