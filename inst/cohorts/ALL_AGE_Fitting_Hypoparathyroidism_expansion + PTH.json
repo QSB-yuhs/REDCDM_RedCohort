@@ -20,7 +20,7 @@
 	"ConceptSets" : [
 		{
 			"id" : 16,
-			"name" : "갑상선수질암 - 갑상선 수술",
+			"name" : "procedure code for thyroidectomy",
 			"expression" : {
 				"items" : [
 					{
