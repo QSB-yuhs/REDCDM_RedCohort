@@ -11,8 +11,8 @@ REDCOHORT
 - Study start date: **Jan 1, 2019**
 - Study end date: **-**
 - Protocol: **-**
-- Publications: **-**
-- Results explorer: **Shiny app
+- Publications: **0**
+- Results explorer: **Shiny app**
 
 
 
