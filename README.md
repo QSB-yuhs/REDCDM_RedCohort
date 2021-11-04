@@ -1,6 +1,20 @@
 REDCOHORT
 ==============================
 
+<img src="https://img.shields.io/badge/Study%20Status-Started-blue.svg" alt="Study Status: Started">
+
+- Analytics use case(s): **Characterization**
+- Study type: **Methods Research**
+- Tags: **REDCDM**
+- Study lead: **REDCDM**
+- Study lead forums tag: **-**
+- Study start date: **Jan 1, 2019**
+- Study end date: **-**
+- Protocol: **-**
+- Publications: **-**
+- Results explorer: **Shiny app
+
+
 
 Requirements
 ============
