@@ -54,7 +54,12 @@ CohortDiagnostics::launchDiagnosticsExplorer(dataFolder = outputFolder)
 
 conn <- DatabaseConnector::connect(connectionDetails)
 
-sql <- SqlRender::render("SELECT b.cohort_definition_id,a.person_id,a.condition_concept_id,a.condition_start_date,b.cohort_start_date FROM @a.condition_occurrence as a right join (select cohort_definition_id,subject_id,cohort_start_date from @b.@c) as b on a.person_id = b.subject_id order by b.cohort_definition_id", a = cdmDatabaseSchema, b = cohortDatabaseSchema, c = cohortTable)
+sql <- SqlRender::render("select a.cohort_definition_id,b.condition_concept_id,a.cohort_start_date,b.condition_start_date
+                          from @b.@c as a
+                          left join (select person_id, condition_concept_id,condition_start_date 
+                          FROM @a.condition_occurrence) as b 
+                          on a.subject_id = b.person_id
+                          order by cohort_definition_id", a = cdmDatabaseSchema, b = cohortDatabaseSchema, c = cohortTable)
 
 sql <- SqlRender::translate(sql, dbms)
 
